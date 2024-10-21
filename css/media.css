@@ -1,0 +1,42 @@
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .header {
+        background-color: #404f59;
+        border-radius: 0 0 10px 10px;
+        padding: 16px 0px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .hero__content {
+        padding-top: 46px;
+    }
+
+    .address {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 31px;
+        line-height: 120%;
+        margin-bottom: 30px;
+    }
+
+    .hero__btn {
+        padding: 9px 28px;
+    }
+
+    .hero__img-wrap {
+        margin-right: -40px;
+    }
+}
