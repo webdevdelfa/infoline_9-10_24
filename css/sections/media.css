@@ -1,0 +1,219 @@
+@media (max-width: 1300px) {
+    .offers__control {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .offers__control svg {
+        width: 9px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        padding-inline: 20px;
+    }
+
+    .header {
+        background-color: #404f59;
+        border-radius: 0 0 10px 10px;
+        padding: 16px 0px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .menu-mobile .logo g {
+        fill: #fff;
+    }
+
+    .menu-mobile .menu__link {
+        font-size: min(32px, 4.27vw);
+    }
+
+    .phone {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .hero__content {
+        padding-top: 46px;
+    }
+
+    .address {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: 31px;
+        line-height: 120%;
+        margin-bottom: 30px;
+    }
+
+    .hero__btn {
+        padding: 9px 28px;
+    }
+
+    .hero__img-wrap {}
+
+    .services .logo {
+        display: none;
+    }
+
+    .services__item {
+        flex: 1 1 calc((100% - 20px) / 2);
+    }
+
+    .gallery__slider {
+        margin-left: 20px;
+    }
+
+    .gallery__item {
+        flex: 0 0 435px;
+        height: 285px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .rent__btns {
+        display: none;
+    }
+
+    .rent__select-wrap {
+        display: inline-block;
+    }
+
+    .offers__control {
+        display: none;
+    }
+
+    /* Карточка предложения */
+    .offer {
+        /* тень */
+        /* https://html5book.ru/css3-ten-bloka/ */
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        flex: 0 0 307px;
+    }
+
+    .offer__btn {
+        padding: 14px 31px;
+    }
+
+    .offer__info {
+        padding: 30px;
+    }
+
+    .services__item {
+        flex-direction: column;
+    }
+
+    .service__img {
+        width: 100%;
+        background-color: transparent;
+        padding-top: 30px;
+        padding-left: 20px;
+        justify-content: flex-start;
+    }
+
+    .service__desc {
+        padding: 20px;
+    }
+
+    /* Для секции "Контакты" задаем двухцветный фон с помощью линейного градиента */
+    .contacts {
+        --contacts-left-col: 71.7%;
+        padding: 90px 0px;
+        background: linear-gradient(180deg, #2C3B45 0, #2C3B45 var(--contacts-left-col), #1E92E7 var(--contacts-left-col));
+        position: relative;
+    }
+
+    .contacts::before {
+        width: 100vw;
+        height: var(--contacts-left-col);
+        background: url(../../img/contacts/decor.svg) no-repeat bottom right / cover;
+    }
+
+    /* Меняем направление оси для контейнера секции контакты */
+    .contacts__container {
+        flex-direction: column;
+    }
+
+    /* Растягиваем блок с картой на всю ширину */
+    .contacts__map {
+        width: 100%;
+    }
+
+    /* Меняем направление оси кнтейнера футера */
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 40px;
+    }
+
+    /* Убираем паддинги для навигационного списка */
+    .footer__nav ul {
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0;
+    }
+
+}
+
+@media(max-width: 580px) {
+    .hero__img-wrap {
+        flex: 0 1 240px;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .address {
+        justify-content: center;
+    }
+
+    .hero__img-wrap {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .hero__img-wrap:before {
+        left: -20px;
+    }
+
+    .hero__img {
+        transform: translateX(0);
+    }
+
+    .hero__img-wrap:after {
+        display: none;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .menu-mobile .menu__link {
+        font-size: 16px;
+    }
+
+    .offers__control--prev {
+        display: none;
+    }
+}

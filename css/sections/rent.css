@@ -1,0 +1,184 @@
+/* Аренда */
+.rent {
+    padding-top: 120px;
+    padding-bottom: 100px;
+}
+
+.rent__title {
+    margin-bottom: 16px;
+}
+
+.rent__btns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+.rent__btn {}
+
+/* Выпадающий список */
+.rent__select-wrap {
+    position: relative;
+    margin-bottom: 40px;
+    display: none;
+}
+
+.rent__select {
+    /* Убрать стандартную стрелку селекта */
+    /*appearance - Сбрасывает стандартный внешний вид элементов.*/
+    appearance: none;
+
+    /* Настройка границ */
+    border: 1px solid var(--akcent);
+    border-radius: 5px;
+
+    padding: 9px 50px 9px 20px;
+
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+
+    outline: none;
+}
+
+/* Кастомная стрелка */
+.rent__select-wrap::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 10px;
+    background-image: url('../../img/rent/arrow_select.svg');
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* - - END Выпадающий список - -  */
+
+
+.offers {}
+
+.offers__container {
+    position: relative;
+}
+
+.control {}
+
+.offers__control {
+    position: absolute;
+    top: 207px;
+}
+
+.offers__control--prev {
+    left: 0;
+}
+
+.offers__control--next {
+    right: 0;
+}
+
+.offers__list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* Карточка предложения */
+.offer {
+    /* тень */
+    /* https://html5book.ru/css3-ten-bloka/ */
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    flex: 0 0 380px;
+}
+
+.offer__content {
+    width: 100%;
+}
+
+.offer__img {
+    width: 100%;
+    height: 222px;
+}
+
+.offer__img img {
+    width: 100%;
+    height: 100%;
+    /* https://doka.guide/css/object-fit/ */
+    object-fit: cover;
+}
+
+.offer__info {
+    padding: 30px 40px 40px;
+}
+
+.offer__info-list {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.offer__info-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer__info-desc {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    flex: 1;
+}
+
+.offer__info-desc::after {
+    content: "";
+    border-bottom: 1px dashed #e6e6e6;
+    flex: 1;
+}
+
+.offer__info-value {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.offer__info-value--true {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #61cd66;
+}
+
+.offer__btn {
+    width: 100%;
+}
+
+.slider-indicators {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.offers__indicators {}
+
+.slider-indicator {
+    background-color: #d9d9d9;
+    border-radius: 1px;
+    width: 76px;
+    height: 3px;
+}
+
+.slider-indicator.active {
+    background-color: var(--akcent);
+}

@@ -1,0 +1,73 @@
+ /* Фотогаллерея */
+ .gallery {
+     padding-top: 120px;
+     padding-bottom: 90px;
+ }
+
+ .gallery__title {
+     margin-bottom: 54px;
+ }
+
+ .gallery__slider {
+     margin-bottom: 50px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position: relative;
+ }
+
+ .gallery__slider-controls {
+     width: 100%;
+     position: absolute;
+     top: 50%;
+ }
+
+ .gallery__slider-control {}
+
+ .gallery__slider-control svg {
+     width: 9px;
+ }
+
+ .gallery__slider-control:hover {
+     scale: 1.1;
+ }
+
+ .gallery__slider-control:hover path {
+     stroke: var(--akcent);
+ }
+
+ .gallery__slider-control-prev {
+     left: 20px;
+ }
+
+ .gallery__slider-control-next {
+     right: 20px;
+ }
+
+ .gallery__list {
+     display: flex;
+     gap: 30px;
+     overflow-x: auto;
+ }
+
+ .gallery__item {
+     flex: 0 0 575px;
+     height: 382px;
+     border-radius: 5px;
+     overflow: hidden;
+     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+ }
+
+ .gallery__img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .slider-indicators {}
+
+ .gallery__slider-indicators {}
+
+ .slider-indicator {}
+
+ .active {}

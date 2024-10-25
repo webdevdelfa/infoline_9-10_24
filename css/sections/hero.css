@@ -1,0 +1,107 @@
+.hero {
+    background-color: var(--dark);
+    border-bottom: 50px solid var(--akcent);
+    background-image: url(../../img/hero/decor.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 134px;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 44px;
+}
+
+.hero__content {
+    flex: 1;
+    padding-top: clamp(46px, 7.8vw, 92px);
+    padding-bottom: clamp(100px, 16.9vw, 199px);
+}
+
+.address {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--akcent);
+    font-style: normal;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.address::before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../../img/icons/clarity_map-marker-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.title {
+    font-weight: 500;
+    font-size: clamp(31px, 4.7vw, 56px);
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 47px;
+}
+
+.hero__btns {}
+
+.hero__btn {}
+
+.hero__img-wrap {
+    flex: 0 1 clamp(256px, 49vw, 580px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 5px 0px 0px 0px;
+    position: relative;
+    /* padding-left: 30px; */
+}
+
+/* Блок с облаками */
+.hero__img-wrap:before {
+    content: "";
+    display: block;
+    background-image: url(../../img/hero/sky.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: url(../img/hero/sky.jpg) center/cover no-repeat; */
+    height: 100%;
+    width: 100vw;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* Фон за облаками */
+.hero__img-wrap:after {
+    content: "";
+    display: block;
+    background-color: #404f59;
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    height: 100%;
+    width: 100vw;
+    border-radius: inherit;
+    z-index: 5;
+}
+
+.hero__img {
+    max-height: 95%;
+    height: auto;
+    z-index: 15;
+    position: relative;
+    flex: 0 0 auto;
+    transform: translateX(30px);
+}

@@ -1,2 +1,10 @@
-@import url(style.css);
-@import url(media.css);
+@import url(sections/base.css);
+@import url(sections/general.css);
+@import url(sections/header.css);
+@import url(sections/hero.css);
+@import url(sections/rent.css);
+@import url(sections/services.css);
+@import url(sections/gallery.css);
+@import url(sections/contacts.css);
+@import url(sections/footer.css);
+@import url(sections/media.css);

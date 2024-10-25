@@ -1,0 +1,196 @@
+.header {
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+}
+
+.header__content {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.logo::before {
+    display: none;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url(../../img/icons/logo.png);
+    background-size: contain;
+}
+
+.header-nav {
+    background-color: #404F59;
+    border-radius: 0px 0px 10px 10px;
+    padding: 20px 40px;
+    margin-top: -30px;
+}
+
+.phone {
+    font-weight: 700;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.phone span {
+    color: #fff;
+}
+
+.phone:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../img/icons/tel.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* Бургер меню */
+.burger {
+    display: none;
+    padding: 0;
+    width: 26px;
+    height: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+/* Бургер меню внутри полноэкранного меню */
+.menu-mobile .burger {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+/* Элемент бургер меню */
+.burger__el {
+    display: block;
+    background: #FFFFFF;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+}
+
+/* Прижать верхний элемент бургера к верхнему краю */
+.burger__el:nth-child(1) {
+    top: 0;
+}
+
+/* Расположить средний элемент по центру */
+.burger__el:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Прижать нижний элемент бургера к нижнему краю */
+.burger__el:nth-child(3) {
+    bottom: 0;
+}
+
+/* Стили элементов бургера внутри мобильного меню */
+
+/* Спрятать средний элемент */
+.menu-mobile .burger__el:nth-child(2) {
+    display: none;
+}
+
+/* Повернуть верхний элемент на 45 градусов */
+.menu-mobile .burger__el:nth-child(1) {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Повернуть нижний элемент на -45 градусов */
+.menu-mobile .burger__el:nth-child(3) {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+
+/***** ПОЛНОЭКРАННОЕ МЕНЮ *****/
+/* Полноэкранное меню появляется когда к блоку menu добавляется класс header__menu-mobile */
+
+/* Задаем плавное изменение всех свойств при смене состояния.
+Это необходимо чтобы меню появлялось плавно
+*/
+.menu {
+    transition: all 0.4s;
+}
+
+/* Мобильное меню */
+.menu-mobile {
+    /* Выстраиваем пункты меню в столбец */
+    flex-direction: column;
+    /* Устанавливаем в начале главной оси */
+    justify-content: flex-start;
+    background: #1E92E7;
+    /* Задаем фиксированное позиционирование, чтобы меню всегда еаходилось поверх основного контента */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    padding: 16px 16px 50px;
+    text-align: center;
+    z-index: 100;
+}
+
+.menu-mobile .header-nav {
+    display: block;
+    background-color: transparent;
+    border-radius: 0px;
+    padding: 54px 0px;
+    margin-top: 0;
+    flex: 1;
+}
+
+/* Навигация внутри мобильного меню */
+.menu-mobile .menu {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Список элементов меню на мобильном устройстве */
+.header__menu-mobile .menu {
+    display: flex;
+    margin-top: 54px;
+    padding: 0;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+/* Прозрачный логотип внутри мобильного меню */
+.menu-mobile .logo {
+    opacity: 0.2;
+}
+
+/* Стили телефона в мобильном меню */
+.menu-mobile .phone {
+    display: block;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.phone::before {
+    display: none;
+}
